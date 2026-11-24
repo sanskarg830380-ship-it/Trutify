@@ -1,0 +1,43 @@
+{
+  "name": "trutify-node-backend",
+  "version": "1.0.0",
+  "description": "API Gateway and Orchestrator for Trutify Multimodal News Verification",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node tests/health.test.js",
+    "test:integration": "node tests/node_python_integration.test.js",
+    "test:phase5": "node tests/text_claim_extraction.test.js",
+    "test:phase11": "node tests/history.test.js",
+    "test:phase12": "node tests/file_verification.test.js",
+    "test:phase13": "node tests/url_verification.test.js"
+  },
+  "keywords": [
+    "news-verification",
+    "fact-checking",
+    "misinformation",
+    "express",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^3.6.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^9.12.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.5.0",
+    "pdf-parse": "^2.4.5",
+    "tesseract.js": "^7.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
